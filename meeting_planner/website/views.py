@@ -6,7 +6,7 @@ from meetings.models import Meeting
 # Create your views here.
 def welcome(request):
     return render(request, "website/welcome.html",
-                  {"num_meetings": Meeting.objects.count()})
+                  {"meetings": Meeting.objects.all()})
 
 
 def date(request):
@@ -15,3 +15,5 @@ def date(request):
 
 def about(request):
     return HttpResponse("I'm Ritwiz")
+
+
